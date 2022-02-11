@@ -21,7 +21,7 @@ $(document).ready(function () {
 
         var audioElement = document.createElement('audio');
         audioElement.src = "15sound.mp3";
-        // audioElement.play();
+        audioElement.play();
 
         if(count <= 5){
             setInterval(scroolAutomatic, 5000);
