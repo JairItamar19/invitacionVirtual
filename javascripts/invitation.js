@@ -46,9 +46,8 @@ $(document).ready(function () {
 
     function scroolAutomatic() {
 
-        let ids = [null, 'da2', 'da3', 'da4', 'da5', 'da6']
+        let ids = [null,'da1', 'da2', 'da3', 'da4', 'da5', 'da6']
 
- 
         if (ids[count] != null ){
             document.getElementById(ids[count]).click();
         }
@@ -56,10 +55,5 @@ $(document).ready(function () {
                 clearInterval();
             }
         count++;
-
     }
-
-   
-
-
 })
