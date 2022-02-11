@@ -1,0 +1,273 @@
+/*invitation  */
+#envelope {
+	margin-top                : 500px;
+	position                  : relative;
+	width                     : 800px;
+	height                    : 550px;
+	border-bottom-left-radius : 6px;
+	border-bottom-right-radius: 6px;
+	margin-left               : auto;
+	margin-right              : auto;
+	top                       : 220px;
+	background-color          : #00334c;
+	box-shadow                : 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.front {
+	position: absolute;
+	width   : 0;
+	height  : 0;
+	z-index : 3;
+}
+
+.flap {
+	border-left     : 400px solid transparent;
+	border-right    : 400px solid transparent;
+	border-bottom   : 300px solid transparent;
+	border-top      : 360px solid #00334c;
+	transform-origin: top;
+}
+
+.pocket {
+	border-left               : 400px solid #eceff1;
+	border-right              : 400px solid #eceff1;
+	border-bottom             : 400px solid #e6e9eb;
+	border-top                : 360px solid transparent;
+	border-bottom-left-radius : 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.letter {
+	font-size       : 2.1rem;
+	position        : relative;
+	background-color: bisque;
+	text-align      : center;
+	width           : 90%;
+	margin-left     : auto;
+	margin-right    : auto;
+	height          : 120%;
+	top             : 0%;
+	border-radius   : 16px;
+	box-shadow      : 0 2px 26px rgba(0, 0, 0, .2);
+}
+
+.letter:after {
+	content         : '';
+	position        : absolute;
+	top             : 0;
+	bottom          : 0;
+	left            : 0;
+	right           : 0;
+	background-image: linear-gradient(rgba(255, 0, 0, 0.4), reba(10, 64, 248, .4));
+}
+
+.words {
+	position        : absolute;
+	left            : 10%;
+	width           : 80%;
+	height          : 14%;
+	background-color: #eeeff0;
+}
+
+.words.line1 {
+	top   : 15%;
+	width : 20%;
+	height: 7%;
+}
+
+.words.line2 {
+	top: 30%;
+}
+
+.words.line3 {
+	top: 50%;
+}
+
+.words.line4 {
+	top: 70%;
+}
+
+.open .flap {
+	transform : rotatex(180deg);
+	transition: transform 0.8s ease, z-index 0.6s;
+	z-index   : 1;
+}
+
+.close .flap {
+	transform : rotatex(0deg);
+	transition: transform 0.4s 0.6s ease, z-index 1s;
+	z-index   : 5;
+}
+
+.close .letter {
+	transform : translatey(0px);
+	transition: transform 0.4s ease, z-index 1s;
+	z-index   : 1;
+}
+
+.open .letter {
+	transform : translatey(-200px);
+	transition: transform 0.4s 0.6s ease, z-index 0.6s;
+	z-index   : 2;
+}
+
+.hearts {
+	position: absolute;
+	top     : 90px;
+	left    : 0;
+	right   : 0;
+	z-index : 2;
+}
+
+.heart {
+	position: absolute;
+	bottom  : 0;
+	right   : 10%;
+}
+
+.heart:before,
+.heart:after {
+	position        : absolute;
+	content         : '';
+	left            : 50px;
+	top             : 0;
+	width           : 50px;
+	height          : 80px;
+	background      : #d00000;
+	border-radius   : 50px 50px 0 0;
+	transform       : rotate(-45deg);
+	transform-origin: 0 100%;
+}
+
+.heart:after {
+	left            : 0;
+	transform       : rotate(45deg);
+	transform-origin: 100% 100%;
+}
+
+.close .heart {
+	opacity  : 0;
+	animation: none;
+}
+
+.a1 {
+	left               : 20%;
+	transform          : scale(0.6);
+	opacity            : 1;
+	animation          : slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+	animation-fill-mode: forwards;
+	animation-delay    : 0.7s;
+}
+
+.a2 {
+	left               : 55%;
+	transform          : scale(1);
+	opacity            : 1;
+	animation          : slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+	animation-fill-mode: forwards;
+	animation-delay    : 0.7s;
+}
+
+.a3 {
+	left               : 10%;
+	transform          : scale(0.8);
+	opacity            : 1;
+	animation          : slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+	animation-fill-mode: forwards;
+	animation-delay    : 0.7s;
+}
+
+@keyframes slideUp {
+	0% {
+		top: 0;
+	}
+
+	100% {
+		top: -600px;
+	}
+}
+
+@keyframes sideSway {
+	0% {
+		margin-left: 0px;
+	}
+
+	100% {
+		margin-left: 50px;
+	}
+}
+
+.envelope-wrapper {
+	height: 550px;
+}
+
+.reset {
+	text-align: center;
+	margin-top: 500px;
+}
+
+.contentStart {
+	z-index     : 5;
+	position    : absolute;
+	margin-left : auto;
+	margin-right: auto;
+	left        : 0;
+	right       : 0;
+	top         : 60%;
+	text-align  : center;
+}
+
+.start button {
+	font-weight       : 800;
+	font-style        : normal;
+	transition        : all 0.1s linear;
+	-webkit-appearance: none;
+	background-color  : transparent;
+	border            : solid 2px #30a3db;
+	border-radius     : 10px;
+	color             : #3f8eb5;
+	display           : inline-block;
+	font-size         : 3.2rem;
+	text-transform    : uppercase;
+	margin            : 5px;
+	padding           : 15px;
+	line-height       : 1em;
+	text-decoration   : none;
+	min-width         : 120px;
+	outline           : none;
+}
+
+.start button:hover {
+	cursor          : pointer !important;
+	background-color: #0077b2;
+	color           : #fff;
+}
+
+.reset button {
+	font-size         : 3rem;
+	font-weight       : 800;
+	font-style        : normal;
+	transition        : all 0.1s linear;
+	-webkit-appearance: none;
+	background-color  : transparent;
+	border            : solid 2px #0077b2;
+	border-radius     : 10px;
+	color             : #0077b2;
+	display           : inline-block;
+	font-size         : 3.2rem;
+	text-transform    : uppercase;
+	margin            : 5px;
+	padding           : 15px;
+	line-height       : 1em;
+	text-decoration   : none;
+	min-width         : 120px;
+	outline           : none;
+}
+
+.reset button:hover {
+	cursor          : pointer !important;
+	background-color: #0077b2;
+	color           : #fff;
+}
+
+/* fin invitation */
