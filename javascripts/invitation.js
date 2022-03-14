@@ -23,9 +23,8 @@ $(document).ready(function () {
         audioElement.src = "15sound.mp3";
         audioElement.play();
 
-        console.log(count)
         if (count <= 5) {
-            setInterval(scroolAutomatic, 3000);
+            setInterval(scroolAutomatic, 4000);
         }
 
 
@@ -46,8 +45,8 @@ $(document).ready(function () {
     var count = 0;
 
     function scroolAutomatic() {
-      
-        let ids = [null, 'da1', 'da2', 'da3', 'da4', 'da5', 'da6']
+
+        let ids = [null, 'da1', 'da2', 'da3', 'da4', 'da5', 'da6' , 'da7']
 
         if (ids[count] != null) {
             document.getElementById(ids[count]).click();
