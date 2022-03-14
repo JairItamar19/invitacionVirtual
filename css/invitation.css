@@ -1,6 +1,6 @@
 /*invitation  */
 #envelope {
-	margin-top                : 500px;
+	margin-top                : 50%;
 	position                  : relative;
 	width                     : 800px;
 	height                    : 550px;
@@ -24,21 +24,21 @@
 	border-left     : 400px solid transparent;
 	border-right    : 400px solid transparent;
 	border-bottom   : 300px solid transparent;
-	border-top      : 360px solid #00334c;
+	border-top      : 360px solid #d31876;
 	transform-origin: top;
 }
 
 .pocket {
-	border-left               : 400px solid #eceff1;
-	border-right              : 400px solid #eceff1;
-	border-bottom             : 400px solid #e6e9eb;
+	border-left               : 400px solid #ff69b4;
+	border-right              : 400px solid #ff69b4;
+	border-bottom             : 400px solid #b73877;
 	border-top                : 360px solid transparent;
 	border-bottom-left-radius : 6px;
 	border-bottom-right-radius: 6px;
 }
 
 .letter {
-	font-size       : 2.1rem;
+	font-size       : 2.8rem;
 	position        : relative;
 	background-color: bisque;
 	text-align      : center;
@@ -154,7 +154,7 @@
 	left               : 20%;
 	transform          : scale(0.6);
 	opacity            : 1;
-	animation          : slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+	animation          : slideUp 4s linear 1, sideSway 2s ease-in-out 24 alternate;
 	animation-fill-mode: forwards;
 	animation-delay    : 0.7s;
 }
@@ -163,7 +163,7 @@
 	left               : 55%;
 	transform          : scale(1);
 	opacity            : 1;
-	animation          : slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+	animation          : slideUp 5s linear 1, sideSway 4s ease-in-out 25 alternate;
 	animation-fill-mode: forwards;
 	animation-delay    : 0.7s;
 }
@@ -172,10 +172,39 @@
 	left               : 10%;
 	transform          : scale(0.8);
 	opacity            : 1;
-	animation          : slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+	animation          : slideUp 7s linear 1, sideSway 2s ease-in-out 25 alternate;
 	animation-fill-mode: forwards;
 	animation-delay    : 0.7s;
 }
+
+.a4 {
+	left               : 25%;
+	transform          : scale(1);
+	opacity            : 1;
+	animation          : slideUp 5s linear 1, sideSway 3s ease-in-out 25 alternate;
+	animation-fill-mode: forwards;
+	animation-delay    : 0.8s;
+}
+
+.a5 {
+	left               : 45%;
+	transform          : scale(1);
+	opacity            : 1;
+	animation          : slideUp 6s linear 1, sideSway 2s ease-in-out 30 alternate;
+	animation-fill-mode: forwards;
+	animation-delay    : 0.7s;
+}
+
+.a6 {
+	left               : 65%;
+	transform          : scale(0.9);
+	opacity            : 1;
+	animation          : slideUp 3s linear 1, sideSway 2s ease-in-out 30 alternate;
+	animation-fill-mode: forwards;
+	animation-delay    : 0.7s;
+}
+
+
 
 @keyframes slideUp {
 	0% {
@@ -201,10 +230,7 @@
 	height: 550px;
 }
 
-.reset {
-	text-align: center;
-	margin-top: 500px;
-}
+
 
 .contentStart {
 	z-index     : 5;
@@ -223,24 +249,30 @@
 	transition        : all 0.1s linear;
 	-webkit-appearance: none;
 	background-color  : transparent;
-	border            : solid 2px #30a3db;
-	border-radius     : 10px;
-	color             : #3f8eb5;
-	display           : inline-block;
-	font-size         : 3.2rem;
-	text-transform    : uppercase;
-	margin            : 5px;
-	padding           : 15px;
-	line-height       : 1em;
-	text-decoration   : none;
-	min-width         : 120px;
-	outline           : none;
+	border            : solid 2px #ee42d7 !important;
+	border-radius     : 4px !important;
+	color             : #d171e4 !important;
+	;
+	display        : inline-block;
+	font-size      : 3.2rem;
+	text-transform : uppercase;
+	margin         : 5px;
+	padding        : 15px;
+	line-height    : 1em;
+	text-decoration: none;
+	min-width      : 120px;
+	outline        : none;
 }
 
 .start button:hover {
 	cursor          : pointer !important;
-	background-color: #0077b2;
+	background-color: #de7af1 !important;
 	color           : #fff;
+}
+
+.reset {
+	text-align: center;
+	margin-top: 500px;
 }
 
 .reset button {
@@ -250,9 +282,9 @@
 	transition        : all 0.1s linear;
 	-webkit-appearance: none;
 	background-color  : transparent;
-	border            : solid 2px #0077b2;
+	border            : solid 2px #fb5eef;
 	border-radius     : 10px;
-	color             : #0077b2;
+	color             : #e66df5;
 	display           : inline-block;
 	font-size         : 3.2rem;
 	text-transform    : uppercase;
@@ -266,8 +298,42 @@
 
 .reset button:hover {
 	cursor          : pointer !important;
-	background-color: #0077b2;
+	background-color: #de7af1;
+	color           : #fff;
+}
+
+.ubication {
+	text-align: center;
+}
+
+.ubication button {
+	font-size         : 3rem;
+	font-weight       : 800;
+	font-style        : normal;
+	transition        : all 0.1s linear;
+	-webkit-appearance: none;
+	background-color  : transparent;
+	border            : solid 2px #fb5eef;
+	border-radius     : 10px;
+	color             : #e66df5;
+	display           : inline-block;
+	font-size         : 3.2rem;
+	text-transform    : uppercase;
+	margin            : 5px;
+	padding           : 15px;
+	line-height       : 1em;
+	text-decoration   : none;
+	min-width         : 120px;
+	outline           : none;
+}
+
+.ubication button:hover {
+	cursor          : pointer !important;
+	background-color: #de7af1;
 	color           : #fff;
 }
 
 /* fin invitation */
+
+
+

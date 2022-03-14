@@ -23,8 +23,9 @@ $(document).ready(function () {
         audioElement.src = "15sound.mp3";
         audioElement.play();
 
-        if(count <= 5){
-            setInterval(scroolAutomatic, 5000);
+        console.log(count)
+        if (count <= 5) {
+            setInterval(scroolAutomatic, 3000);
         }
 
 
@@ -45,15 +46,16 @@ $(document).ready(function () {
     var count = 0;
 
     function scroolAutomatic() {
+      
+        let ids = [null, 'da1', 'da2', 'da3', 'da4', 'da5', 'da6']
 
-        let ids = [null,'da1', 'da2', 'da3', 'da4', 'da5', 'da6']
-
-        if (ids[count] != null ){
+        if (ids[count] != null) {
             document.getElementById(ids[count]).click();
         }
-            if (count == 5) {
-                clearInterval();
-            }
+        if (count == 5) {
+            clearInterval();
+        }
         count++;
+
     }
 })
