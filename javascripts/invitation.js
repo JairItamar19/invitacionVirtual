@@ -46,7 +46,7 @@ $(document).ready(function () {
 
     function scroolAutomatic() {
 
-        let ids = [null, 'da1', 'da2', 'da3', 'da4', 'da5', 'da6' , 'da7']
+        let ids = ['da1', 'da2', 'da3', 'da4', 'da5', 'da6' , 'da7']
 
         if (ids[count] != null) {
             document.getElementById(ids[count]).click();
