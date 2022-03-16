@@ -24,7 +24,7 @@ $(document).ready(function () {
         audioElement.play();
 
         if (count <= 5) {
-            setInterval(scroolAutomatic, 4000);
+           //setInterval(scroolAutomatic, 4300);
         }
 
 

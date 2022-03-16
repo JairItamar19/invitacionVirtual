@@ -211,16 +211,14 @@ a:hover:after {
   top: 0;
 }
 
- .stickyEnd {
-    position: sticky;
-  }
-  .dedicatorioBack {
-    background-image: url('../Images/content/dedicatoria5.png')
-  }
+.stickyEnd {
+  position: sticky;
+}
+.dedicatorioBack {
+  background-image: url('../Images/content/dedicatoria5.png');
+}
 
 @media (min-width: 1000px) {
- 
-
   #envelope {
     margin-top: 0px !important;
     position: relative !important;

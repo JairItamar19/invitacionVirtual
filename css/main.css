@@ -402,7 +402,8 @@ header {
 #parents,
 #padrinos,
 #dedicatoria,
-#misa, #evento {
+#misa,
+#evento {
   margin-bottom: 30vh;
 }
 
@@ -464,7 +465,11 @@ header {
 }
 
 .title_1 {
-  font-size: 50px;
+  font-size: 68px;
+}
+
+.parents-text{
+  font-size: 6.8rem;
 }
 
 .title_2 {
@@ -533,7 +538,6 @@ header:after {
 .audio {
   display: none;
 }
-
 
 .marco-part2 {
   margin-top: -200px;
