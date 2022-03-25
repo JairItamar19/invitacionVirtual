@@ -233,7 +233,7 @@
                   id="whats"
                   onclick="setTimeout(()=>
                 {window.open(
-                  'https://api.whatsapp.com/send?phone=+5215565006055&text=Hola, Confirmo asistencia')},500)"
+                  `https://api.whatsapp.com/send?phone=+5215565006055&text=Hola,  ${tipoPase}`)},500)"
                 >
                   Confirmar asistencia
                 </button>
@@ -272,5 +272,54 @@
     <script src="https://lib.arvancloud.com/jquery/3.6.0/jquery.js"></script>
     <script src="./javascripts/invitation.js"></script>
     <script src="javascripts/show-on-scroll.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search)
+      let param = params.get('accesforFamilly')
+      let tipoPase = ''
+      switch (param) {
+        case 'один':
+          tipoPase = `Confirmo asistencia, Por favor confirme su asistencia colocando su nombre completo, de antemano gracias`
+          break
+        case 'два':
+          tipoPase = `Confirmo asistencia, confirmo asistencia para dos personas, ejemplo: Maria ejemplo ejemplo, Jose ejemplo ejemplo,
+          por favor remplaze las palabras de ejemplo para colocar los nombres reales de los invitados.`
+          break
+        case 'три':
+          tipoPase = `Confirmo asistencia, confirmo asistencia para tres personas, ejemplo: Maria ejemplo ejemplo, Jose ejemplo ejemplo, .....,
+          por favor remplaze las palabras de ejemplo para colocar los nombres reales de los invitados.`
+          break
+        case 'четыре':
+          tipoPase = `Confirmo asistencia, confirmo asistencia para cuatro personas, ejemplo: Maria ejemplo ejemplo, Jose ejemplo ejemplo, .....,
+          por favor remplaze las palabras de ejemplo para colocar los nombres reales de los invitados.`
+          break
+        case 'пять':
+          tipoPase = `Confirmo asistencia, confirmo asistencia para cinco personas, ejemplo: Maria ejemplo ejemplo, Jose ejemplo ejemplo, .....,
+          por favor remplaze las palabras de ejemplo para colocar los nombres reales de los invitados.`
+          break
+        case 'шесть':
+          tipoPase = `Confirmo asistencia, confirmo asistencia para seis personas, ejemplo: Maria ejemplo ejemplo, Jose ejemplo ejemplo, .....,
+          por favor remplaze las palabras de ejemplo para colocar los nombres reales de los invitados.`
+          break
+        case 'семь':
+          tipoPase = `Confirmo asistencia, confirmo asistencia para siete personas, ejemplo: Maria ejemplo ejemplo, Jose ejemplo ejemplo, .....,
+          por favor remplaze las palabras de ejemplo para colocar los nombres reales de los invitados.`
+          break
+        case 'восемь':
+          tipoPase = `Confirmo asistencia, confirmo asistencia para ocho personas, ejemplo: Maria ejemplo ejemplo, Jose ejemplo ejemplo, .....,
+          por favor remplaze las palabras de ejemplo para colocar los nombres reales de los invitados.`
+          break
+        case 'девять':
+          tipoPase = `Confirmo asistencia, confirmo asistencia para nueve personas, ejemplo: Maria ejemplo ejemplo, Jose ejemplo ejemplo, .....,
+          por favor remplaze las palabras de ejemplo para colocar los nombres reales de los invitados.`
+          break
+        case 'десять':
+          tipoPase = `Confirmo asistencia, confirmo asistencia para diez personas, ejemplo: Maria ejemplo ejemplo, Jose ejemplo ejemplo, .....,
+          por favor remplaze las palabras de ejemplo para colocar los nombres reales de los invitados.`
+          break
+        default:
+          tipoPase = `parametro invalido`
+          break
+      }
+    </script>
   </body>
 </html>
